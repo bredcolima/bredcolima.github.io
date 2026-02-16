@@ -923,8 +923,7 @@ window.addEventListener('resize', centerContingencia);
     // ----- MENSAJE DE BIENVENIDA -----
     console.log('%c✨ BRED Colima IAP ✨', 'font-size: 20px; font-weight: bold; color: #0f5c3f;');
     console.log('%cJuntos transformamos vidas en Colima.', 'font-size: 14px; color: #1c4e6c;');
-    console.log('%cSitio web 100% responsivo y optimizado.', 'font-size: 12px; color: #5f6c68;');
-=======
+    console.log('%cSitio web 100% responsivo y optimizado.', 'font-size: 12px; color: #5f6c68;')
 // ===== BRED COLIMA IAP - JAVASCRIPT PREMIUM =====
 // ===== TODAS LAS FUNCIONALIDADES =====
 
@@ -1839,19 +1838,23 @@ window.addEventListener('resize', centerContingencia);
     }
     initNetworkStatus();
 
-    // ----- ACTUALIZAR AÑO EN COPYRIGHT -----
-    function updateCopyrightYear() {
-        const yearElement = document.querySelector('.copyright p');
-        if (yearElement) {
-            const currentYear = new Date().getFullYear();
-            yearElement.innerHTML = `&copy; ${currentYear} BRED Colima IAP. Todos los derechos reservados.`;
-        }
+    // ===== FUNCIONES =====
+function updateCopyrightYear() {
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
     }
+}
+
+// ===== CUANDO CARGA EL DOM =====
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Actualizar año
     updateCopyrightYear();
 
     // ----- MENSAJE DE BIENVENIDA -----
     console.log('%c✨ BRED Colima IAP ✨', 'font-size: 20px; font-weight: bold; color: #0f5c3f;');
     console.log('%cJuntos transformamos vidas en Colima.', 'font-size: 14px; color: #1c4e6c;');
     console.log('%cSitio web 100% responsivo y optimizado.', 'font-size: 12px; color: #5f6c68;');
->>>>>>> 08598490818d970e872e80aecf95b15f72dce2a3
-})();
+
+});
